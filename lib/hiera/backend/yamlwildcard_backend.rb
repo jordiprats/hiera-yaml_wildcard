@@ -44,6 +44,7 @@ class Hiera
           files = [ file ]
           files
         elsif File.directory?(dir)
+          Hiera.debug("yamlwildcard: Cannot find datafile in #{file}, skipping")
           files = Dir.glob(File.join(datadir, "#{source}/*"))
           if files.empty?
             Hiera.debug("yamlwildcard: Cannot find datafiles in #{files}, skipping")
