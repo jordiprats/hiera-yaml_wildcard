@@ -1,0 +1,36 @@
+{
+  "name": "eyp-hiera_yaml_wildcard",
+  "version": "0.1.0",
+  "author": "Jordi Prats",
+  "summary": "YAML with wildcards back end for Hiera",
+  "license": "Apache 2.0",
+  "source": "https://github.com/jordiprats/hiera-yaml_wildcard",
+  "project_page": "https://github.com/jordiprats/hiera-yaml_wildcard",
+  "issues_url": "https://github.com/jordiprats/hiera-yaml_wildcard/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "dependencies": [
+  ]
+}
