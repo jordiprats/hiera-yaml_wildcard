@@ -24,10 +24,10 @@ class Hiera
       def datasourcefiles(backend, scope, extension, override=nil, hierarchy=nil)
         datadir = Backend.datadir(backend, scope)
         Backend.datasources(scope, override, hierarchy) do |source|
-          Hiera.debug("8==D Looking for data source #{source}")
+          Hiera.debug("yamlwildcard: Looking for data source #{source}")
           files = datafile_in(datadir, source, extension)
 
-	  next if files.nil?
+          next if files.nil?
 
           files.each do |file|
             yield source, file
@@ -45,17 +45,14 @@ class Hiera
           files
         elsif File.directory?(dir)
           files = Dir.glob(File.join(datadir, "#{source}/*"))
-          files.each do |kk|
-            Hiera.debug("8==D kk: #{kk}")
-          end
           if files.empty?
-            Hiera.debug("8==D Cannot find datafiles in #{files}, skipping")
+            Hiera.debug("yamlwildcard: Cannot find datafiles in #{files}, skipping")
             nil
           else
             files
           end
         else
-          Hiera.debug("Cannot find datafile #{file}, skipping")
+          Hiera.debug("yamlwildcard: Cannot find datafile #{file}, skipping")
           nil
         end
       end
@@ -70,10 +67,10 @@ class Hiera
       def lookup(key, scope, order_override, resolution_type)
         answer = nil
 
-        Hiera.debug("Looking up #{key} in YAML backend")
+        Hiera.debug("yamlwildcard: Looking up #{key} in YAML backend")
 
         datasourcefiles(:yaml, scope, "yaml", order_override) do |source, yamlfile|
-          Hiera.debug("8==D source #{source} yamlfile #{yamlfile}")
+          Hiera.debug("yamlwildcard: source #{source} yamlfile #{yamlfile}")
           data = @cache.read_file(yamlfile, Hash) do |data|
             YAML.load(data) || {}
           end
@@ -85,7 +82,7 @@ class Hiera
           # multiple times if the resolution type is array or hash but that
           # should be expected as the logging will then tell the user ALL the
           # places where the key is found.
-          Hiera.debug("Found #{key} in #{source}")
+          Hiera.debug("yamlwildcard: Found #{key} in #{source}")
 
           # for array resolution we just append to the array whatever
           # we find, we then goes onto the next file and keep adding to
