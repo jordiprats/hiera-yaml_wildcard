@@ -3,6 +3,8 @@
 # original file: https://github.com/puppetlabs/hiera/blob/master/lib/hiera/backend/yaml_backend.rb
 # based on: https://github.com/puppetlabs/hiera/pull/169/files
 #
+# Copyright (C) 2014 Jordi Prats
+#
 # original author:
 # Puppet - Automating Configuration Management.
 #
@@ -41,7 +43,7 @@ class Hiera
         if File.exist?(file)
           files = [ file ]
           files
-	elsif File.directory?(dir)
+        elsif File.directory?(dir)
           files = Dir.glob(File.join(datadir, "#{source}/*"))
           files.each do |kk|
             Hiera.debug("8==D kk: #{kk}")
