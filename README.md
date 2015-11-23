@@ -28,7 +28,7 @@ sudo gem install hiera-yaml_wildcard-0.1.0.gem
 
 ### Method 2
 
-*IMPORTANT NOTE* hiera-mysql also ships as a Puppet module, which can be synced with the puppet master using pluginsync, if you are using this model, please read [SERVER-571](https://tickets.puppetlabs.com/browse/SERVER-571) - At the time of this release no decision has been made on long term support for shipping hiera backends as modules.
+*IMPORTANT NOTE* hiera_yaml_wildcard also ships as a Puppet module, which can be synced with the puppet master using pluginsync, if you are using this model, please read [SERVER-571](https://tickets.puppetlabs.com/browse/SERVER-571) - At the time of this release no decision has been made on long term support for shipping hiera backends as modules.
 
 ```
 puppet module build
