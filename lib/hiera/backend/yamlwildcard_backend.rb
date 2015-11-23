@@ -20,6 +20,8 @@ class Hiera
   module Backend
     class Yamlwildcard_backend
 
+      VERSION = "0.1.0"
+
 
       def datasourcefiles(backend, scope, extension, override=nil, hierarchy=nil)
         datadir = Backend.datadir(backend, scope)
