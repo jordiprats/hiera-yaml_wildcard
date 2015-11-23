@@ -40,22 +40,25 @@ class Hiera
         file = File.join(datadir, "#{source}.#{extension}")
         dir  = File.join(datadir, "#{source}")
 
+        files = []
+
         if File.exist?(file)
           files = [ file ]
-          files
-        elsif File.directory?(dir)
-          Hiera.debug("yamlwildcard: Cannot find datafile in #{file}, skipping")
-          files = Dir.glob(File.join(datadir, "#{source}/*"))
-          if files.empty?
-            Hiera.debug("yamlwildcard: Cannot find datafiles in #{files}, skipping")
-            nil
-          else
-            files
-          end
         else
-          Hiera.debug("yamlwildcard: Cannot find datafile #{file}, skipping")
-          nil
+          Hiera.debug("yamlwildcard: Cannot find datafile in #{file}, skipping")
         end
+
+        if File.directory?(dir)
+          files_dir = Dir.glob(File.join(datadir, "#{source}/*"))
+          if files_dir.empty?
+            Hiera.debug("yamlwildcard: Cannot find datafiles in #{dir}, skipping")
+          else
+            files += files_dir
+          end
+        end
+
+        files
+
       end
 
       def initialize(cache=nil)
