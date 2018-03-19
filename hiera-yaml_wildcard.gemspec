@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.description   = "YAML with wildcard support backend"
   gem.summary       = "YAML with wildcard support backend for Hiera"
   gem.author        = "Jordi Prats"
+  gem.email         = 'jprats@systemadmin.es'
   gem.license       = "MIT"
 
   gem.homepage      = "https://github.com/jordiprats/hiera-yaml_wildcard"
