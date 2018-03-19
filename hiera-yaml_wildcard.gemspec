@@ -6,8 +6,8 @@ require 'hiera/backend/yamlwildcard_backend.rb'
 Gem::Specification.new do |gem|
   gem.name          = "hiera-yaml_wildcard"
   gem.version       = Hiera::Backend::Yamlwildcard_backend::VERSION
-  gem.description   = "YAML with wildcards backend for Hiera"
-  gem.summary       = "YAML with wildcards backend for Hiera"
+  gem.description   = "YAML with wildcard support backend"
+  gem.summary       = "YAML with wildcard support backend for Hiera"
   gem.author        = "Jordi Prats"
   gem.license       = "MIT"
 
