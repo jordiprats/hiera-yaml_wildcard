@@ -1,6 +1,6 @@
 # hiera - yaml_wildcard
 
-hacky yaml backend
+hacky yaml backend for puppet3
 
 ## Installation
 
