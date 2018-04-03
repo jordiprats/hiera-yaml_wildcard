@@ -42,13 +42,13 @@ Example
 root@a2af3db45023:/# hiera classes ::fqdn=aaa -d
 DEBUG: 2015-11-23 12:32:31 +0100: Hiera YAML backend starting
 DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking up classes in YAML backend
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source _/common-
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Cannot find datafile in /etc/puppet/hieradata/_/common-.yaml, skipping
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source _/common
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Cannot find datafile in /etc/puppet/hieradata/_/common.yaml, skipping
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source _/common yamlfile /etc/puppet/hieradata/_/common/kk.yaml
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source _/common yamlfile /etc/puppet/hieradata/_/common/kk2.yaml
-DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source _/common yamlfile /etc/puppet/hieradata/_/common/kk3.yaml
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source demo/common-
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Cannot find datafile in /etc/puppet/hieradata/demo/common-.yaml, skipping
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source demo/common
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Cannot find datafile in /etc/puppet/hieradata/demo/common.yaml, skipping
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source demo/common yamlfile /etc/puppet/hieradata/demo/common/kk.yaml
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source demo/common yamlfile /etc/puppet/hieradata/demo/common/kk2.yaml
+DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: source demo/common yamlfile /etc/puppet/hieradata/demo/common/kk3.yaml
 DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source common-
 DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Cannot find datafile in /etc/puppet/hieradata/common-.yaml, skipping
 DEBUG: 2015-11-23 12:32:31 +0100: yamlwildcard: Looking for data source common
