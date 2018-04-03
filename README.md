@@ -1,6 +1,6 @@
 # hiera - yaml_wildcard
 
-hacky yaml backend for puppet3
+hacky yaml backend for puppet3. The feature provided by this module is already included in hiera5, so this backend makes no longer sense
 
 ## Installation
 
